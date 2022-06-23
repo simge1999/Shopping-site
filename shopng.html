@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SNEAKERS</title>
+	<link rel="stylesheet" type="text/css" href="shopping.css">
+</head>
+<body>
+	<nav>
+		<img src="/Users/simge/OneDrive/Belgeler/images/icon-menu.svg" class="ham">
+		<img src="/Users/simge/OneDrive/Belgeler/images/logo.svg" class="logo">
+		<span>Collections</span>
+		<span>Men</span>
+		<span>Woman</span>
+		<span>About</span>
+		<span>Contact</span>
+		<frame id="cart"><img src="/Users/simge/OneDrive/Belgeler/images/icon-cart.svg" class="cart" onclick="clickCart()"></frame>
+		<h3 id="itemcounter" style="color:hsl(26, 100%, 55%)">0</h3>
+		<p id="ordertotal"></p>
+		<span><img src="/Users/simge/OneDrive/Belgeler/images/image-avatar.png" class="avatar1" width="50px"></span>
+	</nav>
+	<hr>
+	 <img src="/Users/simge/OneDrive/Belgeler/images/image-product-1-thumbnail.jpg"  onclick="openModal();currentSlide(1)"  class="hover-shadow" id="get">
+	<!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="/Users/simge/OneDrive/Belgeler/images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" width="80px">
+  </div>
+  <div class="column">
+    <img src="/Users/simge/OneDrive/Belgeler/images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" width="80px">
+  </div>
+  <div class="column">
+    <img src="/Users/simge/OneDrive/Belgeler/images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" width="80px">
+  </div>
+  <div class="column">
+    <img src="/Users/simge/OneDrive/Belgeler/images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" width="80px">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="/Users/simge/OneDrive/Belgeler/images/image-product-1-thumbnail.jpg" style="width:60%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="/Users/simge/OneDrive/Belgeler/images/image-product-2-thumbnail.jpg" style="width:60%" >
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="/Users/simge/OneDrive/Belgeler/images/image-product-3-thumbnail.jpg" style="width: 60%;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="/Users/simge/OneDrive/Belgeler/images/image-product-4-thumbnail.jpg" style="width:60%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="/Users/simge/OneDrive/Belgeler/images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="Nature" width="80px">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="/Users/simge/OneDrive/Belgeler/images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="Snow" width="80px">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="/Users/simge/OneDrive/Belgeler/images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="Mountains" width="80px">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="/Users/simge/OneDrive/Belgeler/images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="Lights" width="80px">
+    </div>
+  </div>
+</div>
+	<div class="grid-container1">
+		<div class="grid-item1"><h4 >SNEAKER COMPANY</h4>
+		<div class="grid-item1"><h1 >Fall Limited Edition <br>Sneakers</h1></div>
+		<div class="grid-item1"><p>These low-profile sneakers are your perfect casual wear<br> companion. Featuring a durable rubber outer sole, they'll<br> withstand everything the weather can offer.</p></div>
+		<div class="grid-item1"><acronym>$125.00</acronym>&nbsp;&nbsp;<applet>50%</applet></div>
+		<div class="grid-item1"><del>$250.00</del></div>
+		<div><button class="plus" id="downvote" onclick="downvote()"><keygen>-</keygen></button><button id="votes" style="color: black;"><b>0</b></button><button id="upvote" onclick="upvote()"><keygen">+</keygen></button></div>
+		<div class="grid-item1"><button class="buy" onclick="addToCart()"><img src="/Users/simge/OneDrive/Belgeler/images/icon-cart.svg" class="btn">Add to cart</button></div>
+	</div>
+	<br><br><br><br>
+	<script type="text/javascript" src="shopping.js"></script>
+</body>
+</html>
